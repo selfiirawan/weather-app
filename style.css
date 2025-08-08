@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@400;700&display=swap');
 
+*
 body {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+form {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    border-bottom: 2px solid #888;
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+
+input[type="text"]:focus {
+    border-color: #ff521f;
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+ul li {
+    background-color: #333;
+    margin-top: 2px;
+    padding: 10px;
+    cursor: pointer;
 }
