@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-form {
+form, #weather {
     display: block;
     width: 100%;
     max-width: 300px;
@@ -49,4 +49,53 @@ ul li {
 
 ul li span {
     color: #777;
+}
+
+#degrees {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#city {
+    color: #ff521f;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+button#change {
+    border: 2px solid #888;
+    background-color: transparent;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+div.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div.info h3 {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#icon {
+    margin-bottom: -40px;
+}
+
+div.info .value {
+    font-size: 2rem;
+}
+
+div.info .value span {
+    color: #888;
+    font-size: .8rem;
+    display: inline-block;
+    margin-left: 3px;
 }
