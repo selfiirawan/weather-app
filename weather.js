@@ -20,6 +20,19 @@ const debouncedSearch = _.debounce(() => {
     search();
 }, 600);
 
+const weatherVideos = {
+    Clear: { d: "videos/clear-day.mp4", n: "videos/clear-night.mp4" },
+    Clouds: { d: "videos/clouds-day.mp4", n: "videos/clouds-night.mp4" },
+    Rain: { d: "videos/rain-day.mp4", n: "videos/rain-night.mp4" },
+    Drizzle: { d: "videos/rain-day.mp4", n: "videos/rain-night.mp4" },
+    Thunderstorm: { d: "videos/storm-day.mp4", n: "videos/storm-night.mp4" },
+    Snow: { d: "videos/snow-day.mp4", n: "videos/snow-night.mp4" },
+    Mist: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" },
+    Fog: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" },
+    Haze: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" }
+};
+
+
 async function showWeather(lat, lon, name) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
     const data = await response.json();
@@ -36,6 +49,15 @@ async function showWeather(lat, lon, name) {
     document.getElementById('icon').src = `https://openweathermap.org/img/wn/${icon}@4x.png`;
     document.querySelector('form').style.display = 'none';
     document.getElementById('weather').style.display = 'block';
+
+    const condition = data.weather[0].main;
+    const timeOfDay = icon.endsWith('d') ? 'd' : 'n';
+    const videoSrc = weatherVideos[condition]?.[timeOfDay] || "videos/default.mp4";
+
+    const bgVideo = document.getElementById('backgroundVideo');
+    bgVideo.src = videoSrc;
+    bgVideo.play();
+    bgVideo.playbackRate = 0.8;
 }
 
 document.querySelector('input[type="text"]')
