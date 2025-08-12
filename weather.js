@@ -29,7 +29,7 @@ const weatherVideos = {
     Snow: { d: "videos/snow-day.mp4", n: "videos/snow-night.mp4" },
     Mist: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" },
     Fog: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" },
-    Haze: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" }
+    Haze: { d: "videos/fog-day.mp4", n: "videos/fog-night.mp4" },
 };
 
 

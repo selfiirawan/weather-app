@@ -1,0 +1,26 @@
+{
+  "name": "weather-app-js",
+  "version": "1.0.0",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selfiirawan/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selfiirawan/weather-app/issues"
+  },
+  "homepage": "https://github.com/selfiirawan/weather-app#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.1.2"
+  }
+}
